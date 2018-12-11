@@ -9,6 +9,14 @@ $lato: 'Lato', sans-serif;
 $signature: 'Allura', cursive;
 $handwriting: 'Shadows Into Light Two', cursive;
 
+@mixin rotate($degrees) {
+   -webkit-transform: rotate($degrees);
+   -moz-transform: rotate($degrees);
+   -ms-transform: rotate($degrees);
+   -o-transform: rotate($degrees);
+   transform: rotate($degrees);
+}
+
 body {
   background-color: $background-color;
   color: $white;
@@ -46,6 +54,13 @@ h2 {
   font-size: 2em;
 }
 
+img {
+  max-width: 90%;
+  display:block;
+  height: auto;
+  max-height: 100vh;
+}
+
 .slide-item {
   height: 90vh;
 }
@@ -54,19 +69,49 @@ h2 {
     position: absolute;
     height: calc(100% + 1000vh);
     width: 100%;
-    top: -80vh;
+    top: 0vh;
     left: 0;
     z-index: -1;
-    margin-bottom: 0;
 }
 
 .images {
-    width: 100%;
-    height: 50vh;
-    background: rgb(228, 228, 228);
-    padding: 100px;
+    width: 90%;
     box-sizing: border-box;
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 0;
+    margin: auto;
+}
+
+.elements {
+  height: 100vh;
+}
+
+.annotation {
+  position: absolute;
+  bottom: 35vh;
+  font-family: $handwriting;
+  @include rotate(-20deg);
+  display: none;
+}
+
+.self, .platypus {
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+.panback, .spotify {
+  display: none;
+}
+
+.large-annotation {
+  bottom: 65vh;
+  margin-left: 90px;
+  font-size: 6em;
+  @include rotate(15deg);
+}
+
+.links {
+  & a {
+    border: none;
+    margin-right: 5px;
+  }
 }
