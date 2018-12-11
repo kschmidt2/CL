@@ -1,9 +1,13 @@
+@import "css-reset";
+
 $background-color: #391230;
 $dark-color: #111425;
 $light-color: #edcda6;
 $white: #fff;
 
-$lato: 'Lato', sans-serif;;
+$lato: 'Lato', sans-serif;
+$signature: 'Allura', cursive;
+$handwriting: 'Shadows Into Light Two', cursive;
 
 body {
   background-color: $background-color;
@@ -11,18 +15,21 @@ body {
 }
 
 #container {
-  width: 100%;
+  width: 90%;
   max-width: 600px;
   margin: auto;
   font-family: $lato;
+  padding: 5%;
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 2.5em;
   font-weight: 300;
+  line-height: 1.2;
+  margin-top: 20vh;
 }
 
-p {
+section {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.6;
@@ -34,6 +41,32 @@ a {
   border-bottom: 1px $light-color dotted;
 }
 
+h2 {
+  font-family: $signature;
+  font-size: 2em;
+}
+
 .slide-item {
   height: 90vh;
+}
+
+.sticky-outer {
+    position: absolute;
+    height: calc(100% + 1000vh);
+    width: 100%;
+    top: -80vh;
+    left: 0;
+    z-index: -1;
+    margin-bottom: 0;
+}
+
+.images {
+    width: 100%;
+    height: 50vh;
+    background: rgb(228, 228, 228);
+    padding: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 0;
 }
