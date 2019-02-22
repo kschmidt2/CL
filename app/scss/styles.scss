@@ -62,7 +62,8 @@ img {
 }
 
 .slide-item {
-  height: 90vh;
+  min-height: 200px;
+  margin-bottom: 60vh;
 }
 
 .sticky-outer {
